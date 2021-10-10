@@ -1,0 +1,133 @@
+.navbar-localization-container{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0000004f;
+    z-index: 100;
+}
+
+.navbar-localization{
+    position: absolute;
+    right: 0;
+    width: 30rem;
+    height: 100vh;
+    background-color: white;
+    display: grid;
+    align-content: start;
+    grid-gap: 2rem;
+    justify-items: center;
+    animation: slidefromright .3s linear;
+    /* grid-template-rows: 3rem 10rem 1fr; */
+}
+
+.navbar-localization-col-1{
+    background-color: #064a61;
+    height: 3rem;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    color: white;
+    width: 100%;
+}
+
+.navbar-localization-col-1-p{
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.navbar-localization-col-1-cancel{
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.navbar-localization-col-2{
+    width: 85%;
+    display: grid;
+    grid-gap: 1rem;
+    align-content: start;
+    animation: slidefromup .3s linear;
+}
+
+.navbar-localization-col-2-h4{
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    color: #064a61;
+    letter-spacing: .5px;
+}
+
+.row-option{
+    display: grid;
+    grid-gap: 1rem;
+    align-content: start;
+}
+
+.radio-button{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    border: 1px solid #e7e7e7;
+    background-color: white;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.radio-button::after{
+    content: '';
+    width: .6rem;
+    height: .6rem;
+    /* color: red; */
+    background-color: #064a61;
+    border-radius: 50%;
+    display: none;
+    margin-left: 1px;
+    margin-top: -1px;
+}
+.radioInput{
+    display: none;
+}
+
+.radioLabel{
+    font-size: 1.1rem;
+    color: #8bb9d2;
+}
+
+.radioInput:checked + .radio-button::after{
+    display: block;
+}
+
+.radioInput:checked + .radio-button{
+    border: 1px solid #064a61;
+}
+
+.radioInput:checked ~ .radioLabel{
+    color: #064a61;
+}
+
+.option{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    align-items: center;
+    grid-gap: 6px;
+}
+
+
+.navbar-localization-col-3{
+    width: 85%;
+    display: grid;
+    grid-gap: 1rem;
+    align-content: start;
+    animation: slidefromup .3s linear;
+}
+
+.navbar-localization-col-3-h4{
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    color: #064a61;
+    letter-spacing: .5px;
+}

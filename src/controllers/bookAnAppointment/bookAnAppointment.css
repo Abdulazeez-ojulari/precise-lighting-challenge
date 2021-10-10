@@ -1,0 +1,121 @@
+
+.appointment-header-container{
+    background-color: #f8f8f8;
+    display: grid;
+    justify-items: center;
+    height: 7.5rem;
+}
+
+.appointment-header{
+    width: 90%;
+    display: grid;
+    grid-template-rows: 1.5rem;
+}
+
+.appointment-header-row-1{
+    display: grid;
+    grid-auto-flow: column;
+    margin-top: 3px;
+}
+
+.appointment-header-row-2{
+    align-self: center;
+    justify-self: center;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    color: #064a61;
+}
+
+.appointment-header-pages{
+    list-style-type: none;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    grid-gap: 1rem;
+    color: #8bb9d2;
+    animation: slidefromleft .3s linear;
+}
+
+.book-appointment-steps{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 18rem));
+    justify-content: center;
+    grid-gap: 2rem;
+    padding: 6rem 0;
+    background-color: #fefefe;
+}
+
+.book-appointment-step{
+    padding: 1rem 2rem;
+    height: 22rem;
+    display: grid;
+    grid-gap: 1rem;
+    justify-content: center;
+    align-content: end;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0px 1px 10px #f9f9fb;
+    animation: slidefromup .3s linear;
+}
+
+.active-border-bottom{
+    border-bottom: 2px solid #064a61;
+}
+
+.book-appointment-step-icon{
+    font-size: 5rem;
+    color: #064a61;
+    text-align: center;
+}
+
+.book-appointment-step-h3{
+    font-size: 1.5rem;
+    color: #064a61;
+    letter-spacing: .5px;
+    text-align: center;
+}
+
+.book-appointment-step-h4{
+    font-size: 1.3rem;
+    text-align: center;
+    color: #064a61;
+}
+
+.book-appointment-step-p{
+    color: #8bb9d2;
+    letter-spacing: .5px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.book-appointment-images-container{
+    display: grid;
+    justify-items: center;
+}
+
+.book-appointment-images{
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 1rem;
+    width: 90%;
+    margin-bottom: 13rem;
+    justify-content: space-evenly;
+}
+
+.book-appointment-image{
+    width: 34rem;
+    height: 23rem;
+    animation: opacity .5s linear;
+}
+
+@media screen and (max-width: 730px) {
+    .book-appointment-image{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    .book-appointment-image{
+        height: 18rem;
+    }
+}
