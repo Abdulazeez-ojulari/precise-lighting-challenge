@@ -15,6 +15,7 @@ class Navbar extends Component{
             shoppingCart: false,
             categories: [],
             items: [],
+            sidebar: false,
         }
     }
 
@@ -64,6 +65,13 @@ class Navbar extends Component{
                 shoppingCart: !shoppingCart
             })
         }
+    }
+
+    toggleSidebar = () => {
+        let sidebar = this.state.sidebar;
+        this.setState({
+            sidebar: !sidebar
+        })
     }
 
     render(){
@@ -201,6 +209,7 @@ class Navbar extends Component{
                                 </i>
                             </div>
                         </div>
+                        <button onClick={ this.toggleSidebar } id='openbutton' className="openbtn">☰</button> 
                     </div>
                 </div>
                 { search && 
@@ -214,6 +223,33 @@ class Navbar extends Component{
                 }
                 { shoppingCart && 
                     <ShoppingCart openShoppingCart={this.openShoppingCart} ></ShoppingCart>
+                }
+
+                { this.state.sidebar &&
+                <div className="sidenav_container">
+                    <div id='mySidenav' className="sidenav">
+                        <div className="sidenav_top">
+                            <div className="sidenav-navbar-main-icons">
+                                <i onClick={this.openSearch} className="fa fa-search sidenav-navbar-main-icon"></i>
+                                <i onClick={this.openLocalization} className="fa fa-globe sidenav-navbar-main-icon"></i>
+                                <i onClick={this.openLogin} className="fa fa-user-o sidenav-navbar-main-icon"></i>
+                                <i onClick={this.openShoppingCart} className="fa fa-shopping-bag sidenav-navbar-main-icon">
+                                    <span className="sidenav-numberofitems">2</span>
+                                </i>
+                            </div>
+                            <p onClick={ this.toggleSidebar } id='closebutton' className="closebtn">×</p>
+                        </div>
+                        <div className="sidenav_links">
+                            <a className='sidenav_link' href='/outdoor/items'>Outdoor</a>
+                            <a className='sidenav_link' href='/indoor/items'>Indoor</a>
+                            <a className='sidenav_link' href='/switches-and-sockets/items'>Switches and Sockets</a>
+                            <a className='sidenav_link' href='/commercial/items'>Commercial</a>
+                            <a className='sidenav_link' href='/book-an-appointment'>Showroom</a>
+                            <a className='sidenav_link' href='/ideas'>Ideas</a>
+                            <a className='sidenav_link' href='/vr'>VR</a>
+                        </div>
+                    </div>
+                </div>
                 }
                 
             </React.Fragment>

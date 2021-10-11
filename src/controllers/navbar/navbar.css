@@ -111,34 +111,6 @@ html{
     justify-content: center;
 }
 
-@media screen and (max-width: 740px) {
-    .navbar-main{
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .navbar{
-        grid-template-rows: 2rem max-content;
-    }
-}
-
-@media screen and (max-width: 740px) {
-    .navbar-main-links{
-        width: max-content;
-    }
-
-    .navbar-top{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        grid-gap: 1rem;
-    }
-
-    .navbar{
-        grid-template-rows: max-content max-content;
-    }
-}
-
 .navbar-main-link{
     letter-spacing: .3px;
     margin-right: 7px;
@@ -313,4 +285,215 @@ html{
 a{
     text-decoration: none;
     color: inherit;
+}
+
+.openbtn {
+    font-size: 20px;
+    text-align: start;
+    cursor: pointer;
+    color: #064a61;
+    padding-right: 10px;
+    border: none;
+    position: absolute;
+    background-color: transparent;
+    top: 0rem;
+    right: 0rem;
+}
+
+@media only screen and (max-width: 730px){
+
+    .navbar_link{
+        display: none;
+    }
+
+    .openbtn{
+        display: block;
+    }
+
+    .navbar{
+        grid-template-rows: 2rem max-content;
+    }
+
+    .navbar-main-links{
+        display: none;
+    }
+
+    .navbar-main-icons{
+        display: none;
+    }
+
+    .navbar-top{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        grid-gap: 1rem;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .navbar{
+        grid-template-rows: max-content max-content;
+    }
+
+    .navbar-top-container{
+        padding: 4px;
+    }
+}
+
+.sidenav_container {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #1111118a;
+    overflow-x: hidden;
+    display: grid;
+    justify-content: end;
+}
+
+  .sidenav {
+    height: 100%;
+    width: 20rem;
+    z-index: 1;
+    /* top: 0; */
+    /* justify-self: end; */
+    right: 0;
+    background-color: #064a61;
+    overflow-x: hidden;
+    display: grid;
+    grid-gap: 1rem;
+    align-items: start;
+    align-content: start;
+  }
+
+.sidenav-navbar-main-icons{
+    display: grid;
+    width: 100%;
+    grid-auto-flow: column;
+    grid-gap: 1rem;
+    font-size: 1.5rem;
+    /* justify-content: end; */
+    padding: 2rem 2rem 0;
+    color: #8bb9d2
+}
+
+.sidenav-navbar-main-icon{
+    cursor: pointer;
+    position: relative;
+}
+
+.sidenav-numberofitems{
+    position: absolute;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    background-color: white;
+    color: #064a61;
+    top: -2px;
+    right: 2px;
+    font-size: 8px;
+    text-align: center;
+    display: grid;
+    align-items: center;
+    font-weight: 700;
+}
+
+
+  .sidenav_top{
+    display: grid;
+    grid-auto-flow: column;
+    /* width: max-content; */
+    height: 100%;
+    justify-content: space-between;
+    /* grid-template-rows: 3rem; */
+    grid-template-columns: 1fr 4rem;
+  }
+
+
+  
+  .sidenav_social{
+    width: 100%;
+      height: 5rem;
+      display: grid;
+      grid-auto-flow: column;
+      justify-content: space-around;
+      align-items: center;
+      /* background: red; */
+      align-self: end;
+  }
+  
+  .social-link{
+    text-decoration: none;
+  }
+  
+  .sidenav_links{
+    display: grid;
+    grid-gap: 1rem;
+  }
+  
+  .sidenav_link{
+    float: none;
+    padding: 12px;
+    display: block;
+    text-align: left;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    border: none;
+    width: 95%;
+    color: white;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(128,128,128,.2);
+}
+
+.sidenav_link:hover{
+    width: 100%;
+    background-color: rgb(241 241 241 / 0.04);
+}
+
+.sidedroplink{
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: #a0abb9;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+}
+
+.sidedroplink:hover{
+    width: 100%;
+    background-color: rgb(241 241 241 / 0.04);
+}
+
+.side-icon{
+    font-size: 3rem;
+}
+
+.sidenav_logo{
+    height: 8rem;
+}
+
+.closebtn {
+    font-size: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    height: max-content;
+    color: white;
+    cursor: pointer;
 }

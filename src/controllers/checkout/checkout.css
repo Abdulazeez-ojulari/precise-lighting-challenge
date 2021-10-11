@@ -251,6 +251,23 @@
     display: block;
 }
 
+@media screen and (max-width:780px) {
+    .checkout{
+        display: flex;
+        flex-wrap: wrap;
+        /* grid-auto-flow: column; */
+        /* grid-template-columns: 1fr 28rem; */
+    }
+
+    .checkout-col-1{
+        width: 100%;
+    }
+
+    .checkout-col-2{
+        width: 100%;
+    }
+}
+
 .checkout-payment-method-radioInput:checked + .checkout-payment-method-radio-button{
     border: 1px solid #064a61;
 }
