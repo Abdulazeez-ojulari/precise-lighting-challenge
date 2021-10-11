@@ -266,7 +266,7 @@ class App extends Component {
         <Router>
           <Switch>
             <Route exact path='/'>
-              <Home items={items}></Home>
+              <Home></Home>
             </Route>
             <Route exact path='/:categoryName/items' component={ ItemsByCategory }></Route>
             <Route exact path='/:categoryName/:itemName' component={ ItemByCategory }></Route>
