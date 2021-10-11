@@ -38,7 +38,6 @@ class Search extends Component{
                         return item.itemName.toLowerCase().includes(visited[i].toLowerCase())
                     }
                 }
-                return 1
             })
             this.setState({
                 isRecentlyViewed: true,
@@ -53,7 +52,6 @@ class Search extends Component{
                         return item.itemName.toLowerCase().includes(searched[i].toLowerCase())
                     }
                 }
-                return 1
             })
             this.setState({
                 isRecentlySearched: true,

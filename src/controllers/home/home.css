@@ -143,10 +143,15 @@
 .packages{
     width: 90%;
     display: grid;
-    /* grid-auto-flow: column; */
+    grid-auto-flow: column;
     justify-content: space-between;
-    grid-template-columns: repeat(auto-fill, 22rem);
-    grid-row-gap: 1rem;
+}
+
+@media screen and (max-width: 670px) {
+    .packages{
+        grid-template-columns: repeat(auto-fill, 22rem);
+        grid-row-gap: 1rem;
+    }
 }
 
 .package{
